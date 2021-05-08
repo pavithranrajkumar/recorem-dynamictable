@@ -8,6 +8,19 @@ export const getValue = (obj, key) => {
   return obj;
 };
 
+export const groupBy = (arr, key) => {
+  return arr.reduce((result, obj) => {
+    (result[obj[key]] = result[obj[key]] || []).push(obj);
+    return result;
+  }, {});
+};
+
+export const getUniqData = (arr) => {
+  const jsonData = arr.map(JSON.stringify);
+  const uniqueSet = new Set(jsonData);
+  return Array.from(uniqueSet).map(JSON.parse);
+};
+
 export const filterWithConditions = (arr, conditions) =>
   arr.filter((item) =>
     conditions.every(({ id, operator, value }) => {

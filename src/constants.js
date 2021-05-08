@@ -23,7 +23,12 @@ export const FILTER_TYPES = {
   verified: 'boolean',
 };
 
-export const STATIC_TABLE_DATA = [
+export const CONDITIONS = [
+  { label: 'AND', value: 'AND' },
+  { label: 'OR', value: 'OR' },
+];
+
+export const TABLE_DATA = [
   {
     name: 'Renaldo Ca',
     screen_name: 'rca0',

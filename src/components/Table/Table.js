@@ -1,13 +1,17 @@
-/* eslint-disable default-case */
 import classes from './Table.module.css';
 import React from 'react';
-import { filterWithConditions, getValue } from '../../utils/objectHelper';
+import { filterWithConditions, getUniqData, getValue, groupBy } from '../../utils/objectHelper';
 import CancelIcon from '../../assets/cancel.svg';
 import TickIcon from '../../assets/tick.svg';
 
 const Table = ({ head, keys, data, filters = [] }) => {
-  const processedData = filterWithConditions(data, filters);
+  let filteredData = filterWithConditions(data, filters);
 
+  const alternateFilters = groupBy(filters, 'condition')['OR'];
+  if (alternateFilters) alternateFilters.map((filter) => filteredData.push(...filterWithConditions(data, [filter])));
+
+  console.log(filteredData);
+  const processedData = getUniqData(filteredData);
   return (
     <div className={classes.TableContainer}>
       <table>
@@ -16,7 +20,7 @@ const Table = ({ head, keys, data, filters = [] }) => {
             <th>{item}</th>
           ))}
         </tr>
-        {processedData?.length ? (
+        {processedData.length ? (
           processedData.map((row, i) => (
             <tr>
               {keys?.map((key) => {

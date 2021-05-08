@@ -32,3 +32,8 @@
   display: grid;
   grid-row-gap: 1vw;
 }
+
+.ConditionText {
+  width: 10vw;
+  font-size: 1.3vw;
+}
