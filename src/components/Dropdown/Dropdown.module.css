@@ -1,0 +1,8 @@
+.Dropdown {
+  padding: 0.7vw;
+  border: 1px solid gainsboro;
+  outline: none;
+  color: #535e71;
+  font-size: 1.2vw;
+  min-width: 10vw !important;
+}

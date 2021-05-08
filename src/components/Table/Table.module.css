@@ -1,0 +1,48 @@
+.TableContainer {
+  width: 77vw;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border-radius: 1.56vw;
+  padding: 2.22vw 1.1vw;
+}
+
+.TableContainer table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid gainsboro;
+}
+
+.TableContainer table tr:not(:last-child) {
+  border-bottom: 1px solid #eeeeee;
+}
+
+.TableContainer th,
+.TableContainer td {
+  padding: 1.5vw 0;
+}
+
+.TableContainer td {
+  text-align: center;
+  font-size: 1vw;
+  color: #535e71;
+  text-transform: capitalize;
+  opacity: 0.8;
+}
+
+.TableContainer th {
+  font-size: 0.83vw;
+  font-weight: 500;
+  letter-spacing: 0.8px;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.NoData {
+  padding-top: 1vw;
+  text-align: center;
+  font-size: 1vw;
+  color: #535e71;
+}
+
+.VerifiedIcon {
+  height: 1vw;
+}

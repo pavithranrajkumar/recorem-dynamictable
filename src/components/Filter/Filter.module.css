@@ -1,0 +1,34 @@
+.Filter {
+  display: flex;
+  align-items: center;
+  grid-column-gap: 1vw;
+}
+
+.SearchKey input {
+  height: 1.8vw;
+  padding: 0.561vw;
+  outline: none;
+  border: 1px solid gainsboro;
+  font-size: 1.2vw;
+  color: #535e71;
+}
+
+.DeleteButton img {
+  height: 2vw;
+  cursor: pointer;
+}
+
+.Button {
+  outline: none;
+  border: 1px solid gainsboro;
+  padding: 0.5vw 1vw;
+  width: fit-content;
+  cursor: pointer;
+  font-size: 1vw;
+}
+
+.Container {
+  margin: 1vw 1vw 0px 1vw;
+  display: grid;
+  grid-row-gap: 1vw;
+}
